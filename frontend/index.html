@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Jobber Ute</h1>
+    </div>
+
+    <div id="jobb-list"></div>
+  </body>
+
+  <script src="./sanityClient.js"></script>
+  <script>
+    let PROJECT_ID = "5nqlwy2l"; //Hent din project ID på sanity.io/manage
+    let DATASET = "production";
+    let QUERY = encodeURIComponent('*[_type == "jobb"]{Name,Timer, Betaling, "imageUrl": image.asset->url}');
+
+    let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+
+    async function hentData() {
+      let response = await fetch(URL); //venter på svar fra Sanity før den går videre
+
+      let data = await response.json(); // gjør om svaret fra Sanity til JSON
+
+      let jobbList = data.result;
+      console.log(jobbList[1]);
+      let jobbListDiv = document.getElementById("jobb-list");
+
+      jobbListDiv.innerHTML = jobbList
+        .map((jobb) => {
+          return `<div> 
+                    <h2> ${jobb.Name} </h2> 
+                    <img src="${jobb.imageUrl}"/>
+                    <p>${jobb.Timer}<p>
+                    <p>${jobb.Betaling}<p>
+
+                </div>`;
+        })
+        .join(""); // fjerner ,
+    }
+
+    hentData();
+
+    console.log()
+  </script>
+</html>
