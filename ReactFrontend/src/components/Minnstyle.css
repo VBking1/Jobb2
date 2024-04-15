@@ -1,0 +1,31 @@
+.ja-knapp {
+    background-color: #198908;
+    color: rgb(247, 247, 247);
+    padding: 8px 16px;
+    font-size:70px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 170px;
+    height: 100px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+  }
+
+.nei-knapp {
+  background-color: #890808;
+  color: rgb(247, 247, 247);
+  padding: 8px 16px;
+  font-size:70px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 170px;
+  height: 100px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  
+  }

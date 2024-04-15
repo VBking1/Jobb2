@@ -21,14 +21,44 @@ a {
 a:hover {
   color: #535bf2;
 }
+.hei{
+  margin-top: 0px;
+}
+
+.jobb {
+  color: rgb(42, 42, 42);
+  width: 250px;
+  height: 100px;
+  position: fixed;
+  bottom: 240px;
+  left: 20px;
+  text-align: left; /* Add this line */
+  font-size: 15px;
+
+}
+
+
+
+#timer {
+  color: rgb(42, 42, 42);
+  width: 250px;
+  height: 100px;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  text-align: left; /* Add this line */
+  font-size: 20px;
+}
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
+
+
 
 h1 {
   font-size: 3.2em;
