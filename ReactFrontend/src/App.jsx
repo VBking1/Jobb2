@@ -1,6 +1,4 @@
 import './App.css'
-import { SanityProvider } from './SanityContext'
-import { useSanityContext } from './SanityContext'
 import { useEffect, useState } from 'react'
 import Button from './components/Button'
 import JobbKort from './components/JobbKort'
@@ -47,12 +45,11 @@ function App() {
     }
   ];
   
-  console.log(jobber);
-  const {client} = useSanityContext();
-  const [data, setData] = useState([]);
+  // console.log(jobber);
+
   
-  console.log(client);
-  const query = '*[_type == "jobb"]{Name,Timer, Betaling, "imageUrl": image.asset->url}';
+  // console.log(client);
+  // const query = '*[_type == "jobb"]{Name,Timer, Betaling, "imageUrl": image.asset->url}';
   
   useEffect(() => {
     if (client.fetch) {
