@@ -10,20 +10,20 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/data')
-      .then(response => response.json())
+    fetch('http://localhost:3001/api/data')     //henter data fra server
+      .then(response => response.json())  //gjør om til json format
       .then(data => {
-        setData(data);
-        setLoading(false);
+        setData(data);         
+        setLoading(false);    
       })
-      .catch(error => {
-        console.error('Error:', error);
+      .catch(error => {       //hvis det er en feil
+        console.error('Error:', error);   
         setLoading(false);
       });
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>;    //hvis det tar tid å laste inn
   }
 
   let jobber = [
@@ -85,10 +85,10 @@ function App() {
     }
   ];
   
-  console.log(jobber, "jobber -app");
+  console.log(jobber, "jobber -app");     //sjekker om jobber er riktig
+   
 
-
-   console.log(data, "data-at");
+   console.log(data, "data-at");         //sjekker om data er riktig
 
 
   return (
