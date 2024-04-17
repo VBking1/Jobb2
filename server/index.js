@@ -14,7 +14,7 @@ const pool = mariadb.createPool({
     host: "127.0.0.1",
     user: "root",
     password: "Bill3101",
-    database: "Butikk"
+    database: "jobber"
 });
 
 
@@ -23,7 +23,7 @@ app.get('/api/data', async (req, res) => {
     let conn;
     try {
         conn = await pool.getConnection();
-        const rows = await conn.query('SELECT * FROM Kunder');
+        const rows = await conn.query('SELECT * FROM Jobbkort');
         res.json(rows);
     } catch (err) {
         console.log("Error while connecting to MariaDB or executing query:", err);

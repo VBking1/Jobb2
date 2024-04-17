@@ -6,6 +6,25 @@ import JobbKort from './components/JobbKort'
 
 
 function App() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/data')
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   let jobber = [
     {
@@ -45,36 +64,33 @@ function App() {
     }
   ];
   
-  // console.log(jobber);
+  //console.log(jobber, "jobber -app");
 
-  
-  // console.log(client);
-  // const query = '*[_type == "jobb"]{Name,Timer, Betaling, "imageUrl": image.asset->url}';
-  
-  useEffect(() => {
-    if (client.fetch) {
-      client
-        .fetch(query)
-        .then((data) => {
-          setData(data);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    }
-  }, [client, setData, query]);
 
-  console.log(data);
+  console.log(data, "data-at");
+
 
   return (
     <div  className='hei'>
-      <SanityProvider>
+{/* 
+          {data.map((Jobbkort, index) => (
+
+              <div key={index} className="hei">
+              <p>Navn: {Jobbkort.tittel}</p>
+
+              <p>Beskrivelse:{Jobbkort.beskrivelse}</p>
+              </div>
+          ))}  */}
+
+
         <h1  className='hei'>Jobb for deg og meg</h1>
-        <Button jobber={jobber}></Button>
-        <JobbKort jobber= {jobber}></JobbKort>
+
+        
+        <Button jobber={data}></Button>
+        <JobbKort jobber= {data}></JobbKort>
 
 
-      </SanityProvider>
+     
     </div>
   )
 }
