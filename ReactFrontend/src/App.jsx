@@ -107,8 +107,8 @@ function App() {
         <h1  className='hei'>Jobb for deg og meg</h1>
 
         
-        <Button jobber={data}></Button>
-        <JobbKort jobber= {data}></JobbKort>
+        <Button jobber={jobber}></Button>
+        <JobbKort jobber= {jobber}></JobbKort>
 
 
      
