@@ -1,6 +1,6 @@
 const express = require('express');
 const mariadb = require('mariadb');
-const cors = require('cors'); // Add this line
+const cors = require('cors'); 
 const app = express();
 const port = 3001;
 

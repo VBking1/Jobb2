@@ -61,26 +61,47 @@ function App() {
       antallTimer: 2,
       timeLønn: 160,
       bildeUrl: "https://example.com/renholdsarbeid.jpg" // Add image URL here
+    },
+    {
+      tittel: "Renholdsarbeid",
+      beskrivelse: "Utføre rengjøring og organisering av private hjem eller kontorer.",
+      antallTimer: 2,
+      timeLønn: 160,
+      bildeUrl: "https://example.com/renholdsarbeid.jpg" // Add image URL here
+    },
+    {
+      tittel: "Renholdsarbeid",
+      beskrivelse: "Utføre rengjøring og organisering av private hjem eller kontorer.",
+      antallTimer: 2,
+      timeLønn: 160,
+      bildeUrl: "https://example.com/renholdsarbeid.jpg" // Add image URL here
+    },
+    {
+      tittel: "Renholdsarbeid",
+      beskrivelse: "Utføre rengjøring og organisering av private hjem eller kontorer.",
+      antallTimer: 2,
+      timeLønn: 160,
+      bildeUrl: "https://example.com/renholdsarbeid.jpg" // Add image URL here
     }
   ];
   
   //console.log(jobber, "jobber -app");
 
 
-  console.log(data, "data-at");
+   console.log(data, "data-at");
 
 
   return (
     <div  className='hei'>
-{/* 
-          {data.map((Jobbkort, index) => (
+
+           {/* {data.map((Jobbkort, index) => (
 
               <div key={index} className="hei">
               <p>Navn: {Jobbkort.tittel}</p>
 
               <p>Beskrivelse:{Jobbkort.beskrivelse}</p>
               </div>
-          ))}  */}
+          ))}    */}
 
 
         <h1  className='hei'>Jobb for deg og meg</h1>
