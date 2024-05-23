@@ -23,6 +23,28 @@ Jobb For Deg og Meg er en app som gjør det mulig for ungdommer å finne og ta p
 3. Neste jobb
    Etter at du har valgt enten det grønne hjertet eller det røde krysset, vil en ny jobb vises på skjermen, og prosessen gjentar seg.
 
+# Lokal Installasjon
+## Node
+Sjekk om du har node ved å skrive
+   ```
+   npm -v
+   ```
+
+
+1. Gå til Node.js' offisielle nettsted [https://nodejs.org](https://nodejs.org).
+
+2. Nettstedet vil gjenkjenne operativsystemet ditt og vise riktig nedlastingsalternativ. Velg den anbefalte LTS-versjonen (Long-Term Support) for stabilitet og pålitelighet.
+
+3. Last ned Node.js-installasjonsprogrammet ved å klikke på nedlastingsknappen og lagre filen på datamaskinen din.
+
+4. Når nedlastingen er fullført, åpner du installasjonsprogrammet og følger instruksjonene. Du vil bli veiledet gjennom installasjonsprosessen for Node.js og npm. Merk at Node.js og npm er installert sammen.
+
+5. Etter installasjonen kan du bekrefte om npm er riktig installert ved å åpne kommandolinjen og skrive følgende kommando:
+   ```
+   npm -v
+   ```
+
+
 ## Kontakt og støtte
 
 Hvis du har spørsmål, problemer eller trenger hjelp, vennligst ta kontakt.
