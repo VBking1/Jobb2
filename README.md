@@ -44,6 +44,11 @@ Hvis du ikke har det, følg instruksene videre
    ```
    npm -v
    ```
+## Instalasjon av React
+følgende kommando for å installere React:
+  ```shell
+  npm install react
+  ```
 
 
 ## Kontakt og støtte
