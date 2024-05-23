@@ -24,6 +24,22 @@ Jobb For Deg og Meg er en app som gjør det mulig for ungdommer å finne og ta p
    Etter at du har valgt enten det grønne hjertet eller det røde krysset, vil en ny jobb vises på skjermen, og prosessen gjentar seg.
 
 # Lokal Installasjon
+## Klon Prosjektet
+1. Åpne et terminalvindu på datamaskinen din.
+
+2. Naviger til mappen der du vil lagre den klonede repositories. Du kan bruke følgende kommando for å gå til ønsket mappe:
+   ```
+   cd din-mappe/
+   ```
+
+3. Kjør følgende kommando for å klone repositoriet:
+   ```
+   git clone https://github.com/VBking1/Jobb2.git
+   ```
+
+   Dette vil hente ned hele repositoriet lokalt på datamaskinen din.
+
+
 ## Node
 Sjekk om du har node ved å skrive
    ```
