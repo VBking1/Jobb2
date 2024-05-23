@@ -1,7 +1,7 @@
-# JobApp for Youth - README
+# Jobb For Deg og Meg - README
 
 ## Introduksjon
-JobApp for Youth er en app som gjør det mulig for ungdommer å finne og ta på seg småjobber i sitt nærområde for å tjene litt ekstra penger. Appen er designet for å være enkel å bruke, med et intuitivt og brukervennlig grensesnitt som gjør jobbsøking både morsomt og effektivt.
+Jobb For Deg og Meg er en app som gjør det mulig for ungdommer å finne og ta på seg småjobber i sitt nærområde for å tjene litt ekstra penger. Appen er designet for å være enkel å bruke, med et intuitivt og brukervennlig grensesnitt som gjør jobbsøking både morsomt og effektivt.
 
 ## Funksjoner
 - Finn småjobber: Bla gjennom tilgjengelige småjobber i ditt nærområde.
