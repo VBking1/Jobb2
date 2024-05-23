@@ -25,7 +25,7 @@ JobApp for Youth er en app som gjør det mulig for ungdommer å finne og ta på 
 
 ## Kontakt og støtte
 
-Hvis du har spørsmål, problemer eller trenger hjelp, vennligst kontakt vår support på support@jobappforyouth.com.
+Hvis du har spørsmål, problemer eller trenger hjelp, vennligst ta kontakt.
 
 ## License
 [License](LICENSE)
