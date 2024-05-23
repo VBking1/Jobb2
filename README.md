@@ -29,6 +29,7 @@ Sjekk om du har node ved å skrive
    ```
    npm -v
    ```
+Hvis du ikke har det, følg instruksene videre
 
 
 1. Gå til Node.js' offisielle nettsted [https://nodejs.org](https://nodejs.org).
