@@ -23,5 +23,9 @@ JobApp for Youth er en app som gjør det mulig for ungdommer å finne og ta på 
 3. Neste jobb
    Etter at du har valgt enten det grønne hjertet eller det røde krysset, vil en ny jobb vises på skjermen, og prosessen gjentar seg.
 
+## Kontakt og støtte
+
+Hvis du har spørsmål, problemer eller trenger hjelp, vennligst kontakt vår support på support@jobappforyouth.com.
+
 ## License
 [License](LICENSE)
