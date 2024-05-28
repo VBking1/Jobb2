@@ -47,7 +47,7 @@ function JobbKort(props) {
       <p id="timer">Antall Timer: {jobber[index].antallTimer}</p>
       
       
-      <button className="ja-knapp" onClick={nesteJobb}><FontAwesomeIcon icon={faHeart} /></button>
+      <button type="button" className="ja-knapp" onClick={nesteJobb}><FontAwesomeIcon icon={faHeart} /></button>
       <button className="nei-knapp" onClick={nesteJobb}><FontAwesomeIcon icon={faTimes} /></button>
     </div>
 );
