@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://172.31.25.150:3001/api/data')     //henter data fra server
+    fetch('http://localhost:3001/api/data')     //henter data fra server
       .then(response => response.json())  //gjør om til json format
       .then(data => {
         setData(data);         
