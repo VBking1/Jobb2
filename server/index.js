@@ -92,6 +92,6 @@ app.get('/api/data', async (req, res) => {
     }
 });
 
-app.listen(3001, '0.0.0.0', () => {
-    console.log(`Server listening at http://0.0.0.0:${port}`)
+app.listen(3001, () => {
+    console.log(`Server listening at http://localhost:${port}`)
 });
