@@ -71,7 +71,6 @@ app.use(cors({
 }));
 
 const pool = mariadb.createPool({
-    connectionLimit: 20,
     host: "127.0.0.1",
     user: "root",
     password: decryptedPassword,
