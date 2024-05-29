@@ -9,10 +9,6 @@ function LeggTilJobb() {
   const [jobbLagtTil, setJobbLagtTil] = useState(false); // ny tilstand for å spore om en jobb har blitt lagt til
  
 
-
-
-
-
   const handleSubmit = async (event) => {    
     event.preventDefault();
 
