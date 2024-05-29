@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import JobbForm from './compenents/JobbForm';
 
 function LeggTilJobb() {
@@ -7,6 +7,11 @@ function LeggTilJobb() {
   const [antallTimer, setAntallTimer] = useState('');
   const [timeLønn, setTimeLønn] = useState('');
   const [jobbLagtTil, setJobbLagtTil] = useState(false); // ny tilstand for å spore om en jobb har blitt lagt til
+ 
+
+
+
+
 
   const handleSubmit = async (event) => {    
     event.preventDefault();
