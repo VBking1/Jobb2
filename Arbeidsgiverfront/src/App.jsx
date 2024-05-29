@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+function LeggTilJobb() {
+  const [tittel, setTittel] = useState('');
+  const [beskrivelse, setBeskrivelse] = useState('');
+  const [antallTimer, setAntallTimer] = useState('');
+  const [timeLønn, setTimeLønn] = useState('');
+  const [jobbLagtTil, setJobbLagtTil] = useState(false); // ny tilstand for å spore om en jobb har blitt lagt til
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const jobb = { tittel, beskrivelse, antallTimer, timeLønn };
+
+    const response = await fetch('http://localhost:3001/api/jobb', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(jobb),
+    });
+
+    if (response.ok) {
+      setTittel('');
+      setBeskrivelse('');
+      setAntallTimer('');
+      setTimeLønn('');
+      setJobbLagtTil(true); // sett jobbLagtTil til true når en jobb er lagt til
+    } else {
+      console.error('Feil:', response);
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={tittel} onChange={e => setTittel(e.target.value)} placeholder="Tittel" required />
+      <input type="text" value={beskrivelse} onChange={e => setBeskrivelse(e.target.value)} placeholder="Beskrivelse" required />
+      <input type="number" value={antallTimer} onChange={e => setAntallTimer(e.target.value)} placeholder="Antall Timer" required />
+      <input type="number" value={timeLønn} onChange={e => setTimeLønn(e.target.value)} placeholder="Time Lønn" required />
+      <button type="submit">Legg til Jobb</button>
+      {jobbLagtTil && <p>Jobben ble lagt til!</p>} {/* vis en melding når en jobb er lagt til */}
+    </form>
+  );
 }
 
-export default App
+export default LeggTilJobb;
