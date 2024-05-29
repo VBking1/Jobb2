@@ -66,16 +66,14 @@ Følgende kommando for å installere React:
   npm install react
   ```
 
-## Installasjon av React
-
-# Trinn 2: Installer Vite
+## Trinn 2: Installer Vite
 Hvis Vite ikke allerede er oppført som en avhengighet i package.json, kan du installere det ved å kjøre følgende kommando:
 
 ```sh
 npm install vite --save-dev
 ```
 
-# Trinn 3: Bekreft at Vite er riktig installert
+### Trinn 3: Bekreft at Vite er riktig installert
 Når installasjonen er fullført, kan du bekrefte at Vite er riktig installert ved å sjekke om det finnes i node_modules/.bin/-katalogen. Du kan gjøre dette med følgende kommando:
 
 ```sh
@@ -84,7 +82,7 @@ ls node_modules/.bin/vite
 
 Hvis denne kommandoen viser "vite", betyr det at Vite er installert korrekt.
 
-# Trinn 4: Kjør "npm run dev" igjen
+### Trinn 4: Kjør "npm run dev" igjen
 Nå kan du prøve å kjøre utviklingsserveren på nytt ved å kjøre følgende kommando:
 
 ```sh
