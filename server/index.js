@@ -59,7 +59,7 @@ function decrypt(text) {
 // Get and decrypt the database password
 const encryptedPassword = process.env.Password;
 const decryptedPassword = decrypt(encryptedPassword);
-console.log('Decrypted password:', decryptedPassword); // Log the decrypted password
+console.log('Decrypted password'); // Log the decrypted password
 
 const app = express();
 const port = 3001;
@@ -98,6 +98,8 @@ app.post('/api/jobb', async (req, res) => {
     try {
         conn = await pool.getConnection();
         const { tittel, beskrivelse, antallTimer, timeLønn } = req.body;
+        console.log(body)
+        console.log(req)
         const query = `INSERT INTO Jobbkort (tittel, beskrivelse, antallTimer, timeLønn) VALUES (?, ?, ?, ?)`;
         await conn.query(query, [tittel, beskrivelse, antallTimer, timeLønn]);
         res.status(201).send('Jobb lagt til');

@@ -107,7 +107,7 @@ function App() {
         <h1  className='hei'>Jobb for deg og meg</h1>
 
         
-        <Button jobber={data}></Button>
+        {/* <Button jobber={data}></Button> */}
         <JobbKort jobber= {data}></JobbKort>
 
 

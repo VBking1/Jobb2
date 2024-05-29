@@ -29,7 +29,7 @@ function JobbKort(props) {
 
 
 
-    let maks = jobber.lenght;
+    // let maks = jobber.lenght;
 
     // console.log(maks);
     // let max = jobber.length + 1;
@@ -47,8 +47,8 @@ function JobbKort(props) {
       <p id="timer">Antall Timer: {jobber[index].antallTimer}</p>
       
       
-      <button type="button" className="ja-knapp" onClick={nesteJobb}><FontAwesomeIcon icon={faHeart} /></button>
-      <button className="nei-knapp" onClick={nesteJobb}><FontAwesomeIcon icon={faTimes} /></button>
+      <button type="button" className="ja-knapp" onClick={nesteJobb}>  <FontAwesomeIcon icon={faHeart} /></button>
+      <button className="nei-knapp" onClick={nesteJobb}>  <FontAwesomeIcon icon={faTimes} /></button>
     </div>
 );
 }

@@ -29,3 +29,17 @@
   left: 20px;
   
   }
+
+  .visually-hidden { 
+    border: 0; /* Fjerner enhver kantlinje for visuell konsistens */
+    padding: 0; /* Fjerner enhver utfylling for visuell konsistens */
+    margin: 0; /* Fjerner enhver marg for visuell konsistens */
+    position: absolute !important; /* Plasserer elementet absolutt for å fjerne det fra dokumentflyten */
+    height: 1px; /* Setter høyden til 1 piksel for å minimere tilstedeværelsen */
+    width: 1px; /* Setter bredden til 1 piksel for å minimere tilstedeværelsen */
+    overflow: hidden; /* Skjuler eventuelt overløp for å sikre at ingen innhold er synlig */
+    clip: rect(1px 1px 1px 1px); /* For IE6, IE7 - bruker et klipprektangel for å skjule elementet utenfor skjermen */
+    clip: rect(1px, 1px, 1px, 1px); /* For støtte for eldre nettlesere - samme som over, men med annen syntaks */
+    clip-path: inset(50%); /* For moderne nettlesere - klipper elementet innover fra hvert hjørne for å skjule det */
+    white-space: nowrap; /* Forhindrer tekst fra å bryte linjer for å sikre at ord ikke blir presset sammen, noe som hjelper skjermlesere med å tolke teksten riktig */
+}
