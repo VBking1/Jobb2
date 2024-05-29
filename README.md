@@ -72,9 +72,8 @@ Følgende kommando for å installere React:
 # Installer avhengighetene
 Kjør følgende kommando i prosjektmappen for å installere alle avhengigheter definert i package.json-filen:
 
-sh
-Kopier kode
-```
+```sh
+
 npm install```
 
 # Installer Vite
