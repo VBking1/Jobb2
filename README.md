@@ -66,7 +66,7 @@ Følgende kommando for å installere React:
   npm install react
   ```
 
-## Trinn 2: Installer Vite
+# Installer Vite
 Hvis Vite ikke allerede er oppført som en avhengighet i package.json, kan du installere det ved å kjøre følgende kommando:
 
 ```sh
