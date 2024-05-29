@@ -69,7 +69,7 @@ Følgende kommando for å installere React:
 
 
 
-# Installer avhengighetene
+## Installer avhengighetene
 Kjør følgende kommando i prosjektmappen for å installere alle avhengigheter definert i package.json-filen:
 
 ```sh
