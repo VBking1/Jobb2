@@ -88,7 +88,7 @@ function App() {
   console.log(jobber, "jobber -app");     //sjekker om jobber er riktig
    
 
-   console.log(data, "data-at");         //sjekker om data er riktig
+  //  console.log(data, "data-at");         //sjekker om data er riktig
 
 
   return (
@@ -108,7 +108,7 @@ function App() {
 
         
         {/* <Button jobber={data}></Button> */}
-        <JobbKort jobber= {data}></JobbKort>
+        <JobbKort jobber= {jobber}></JobbKort>
 
 
      
