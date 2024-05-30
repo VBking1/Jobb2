@@ -102,6 +102,16 @@ npm run dev
 Dette vil starte Vite-utviklingsserveren, og du kan nå fortsette med utviklingen av prosjektet ditt.
 
 
+# Installer react-cookie-consent
+For å få tilgang til samtykkeskjemaet må du laste ned dette.
+
+```sh
+npm install react-cookie-consent
+```
+
+
+
+
 ## Kontakt og støtte
 
 Hvis du har spørsmål, problemer eller trenger hjelp, vennligst ta kontakt.
