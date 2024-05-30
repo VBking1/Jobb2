@@ -45,6 +45,7 @@ function JobbKort(props) {
       <h2 >{jobber[index].tittel}</h2>
       <p>{jobber[index].beskrivelse}</p>
       <p id="timer">Antall Timer: {jobber[index].antallTimer}</p>
+      <p> Timelønn: {jobber[index].timeLønn} </p>
       
       
       <button type="button" className="ja-knapp" onClick={nesteJobb}>  <FontAwesomeIcon icon={faHeart} /></button>

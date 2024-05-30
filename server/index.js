@@ -91,25 +91,46 @@ app.get('/api/data', async (req, res) => {
     }
 });
 
-app.use(express.json());
+// app.use(express.json());
 
-app.post('/api/jobb', async (req, res) => {
-    let conn;
-    try {
-        conn = await pool.getConnection();
-        const { tittel, beskrivelse, antallTimer, timeLønn } = req.body;
-        console.log(req)
-        const query = `INSERT INTO Jobbkort (tittel, beskrivelse, antallTimer, timeLønn) VALUES (?, ?, ?, ?)`;
-        await conn.query(query, [tittel, beskrivelse, antallTimer, timeLønn]);
-        res.status(201).send('Jobb lagt til');
-    } catch (err) {
-        console.log("Error while connecting to MariaDB or executing query:", err);
-        res.status(500).send(err);
-    } finally {
-        if (conn) conn.end();
-    }
-});
 
 app.listen(3001, () => {
     console.log(`Server listening at http://localhost:${port}`)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// app.post('/api/jobb', async (req, res) => {
+//     let conn;
+//     try {
+//         conn = await pool.getConnection();
+//         const { tittel, beskrivelse, antallTimer, timeLønn } = req.body;
+//         console.log(req)
+//         const query = `INSERT INTO Jobbkort (tittel, beskrivelse, antallTimer, timeLønn) VALUES (?, ?, ?, ?)`;
+//         await conn.query(query, [tittel, beskrivelse, antallTimer, timeLønn]);
+//         res.status(201).send('Jobb lagt til');
+//     } catch (err) {
+//         console.log("Error while connecting to MariaDB or executing query:", err);
+//         res.status(500).send(err);
+//     } finally {
+//         if (conn) conn.end();
+//     }
+// });

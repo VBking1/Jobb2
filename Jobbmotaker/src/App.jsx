@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:3001/api/data')     //henter data fra server
       .then(response => response.json())  //gjør om til json format
-      .then(data => {
+      .then(data => {        
         setData(data);         
         setLoading(false);    
       })
@@ -22,9 +22,11 @@ function App() {
       });
   }, []);
 
+
   if (loading) {
     return <div>Loading...</div>;    //hvis det tar tid å laste inn
   }
+  
 
   let jobber = [
     {
@@ -88,7 +90,7 @@ function App() {
   console.log(jobber, "jobber -app");     //sjekker om jobber er riktig
    
 
-  //  console.log(data, "data-at");         //sjekker om data er riktig
+  console.log(data, "data-at");         //sjekker om data er riktig
 
 
   return (
@@ -108,7 +110,7 @@ function App() {
 
         
         {/* <Button jobber={data}></Button> */}
-        <JobbKort jobber= {jobber}></JobbKort>
+        <JobbKort jobber= {data}></JobbKort>
 
 
      
